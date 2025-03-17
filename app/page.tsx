@@ -100,8 +100,8 @@ export default function Home() {
                 description="Developed a website for WorkBeaver, featuring an intuitive interface for automating repetitive tasks. Implemented a backend API to manage authentication and authorization."
                 image="https://ik.imagekit.io/onefestival/cv/work-beaver.png?tr=w-800"
                 technologies={["NextJS", "React", "NodeJS"]}
-                link="Demo"
                 delay={0.3}
+                link="https://workbeaver.com/"
               />
 
               <ProjectCard
@@ -109,8 +109,8 @@ export default function Home() {
                 description="Secure platform to protect users from fraud risks. Built with modern technologies to ensure security and performance."
                 image="https://ik.imagekit.io/onefestival/cv/safe-midman.png??tr=w-800"
                 technologies={["React", "NodeJS", "AWS"]}
-                link="Demo"
                 delay={0.4}
+                link="https://www.linkedin.com/posts/earonvillamora_ang-midman-app-ng-bayan-safe-wins-best-activity-7105158092476096512-coPe/?trk=public_profile_like_view"
               />
 
               <ProjectCard
@@ -118,7 +118,7 @@ export default function Home() {
                 description="Comprehensive app for festival-goers with maps, line-up info, and real-time updates. Available on both iOS and Android platforms."
                 image="https://ik.imagekit.io/onefestival/cv/one-festival-website.png??tr=w-800"
                 technologies={["ReactNative", "NodeJS"]}
-                link="Demo"
+                link="https://onefestival.framer.website/"
                 delay={0.5}
               />
             </div>

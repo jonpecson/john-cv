@@ -1,28 +1,35 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { ExternalLink } from "lucide-react"
-import Link from "next/link"
-import * as TechIcons from "./tech-icons"
+import * as TechIcons from "./tech-icons";
+
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  image: string
-  technologies: string[]
-  link?: string
-  delay?: number
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  link?: string;
+  delay?: number;
 }
 
-export function ProjectCard({ title, description, image, technologies, link, delay = 0 }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  image,
+  technologies,
+  link,
+  delay = 0,
+}: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="overflow-hidden rounded-xl glass-card shadow-lg"
-    >
+      className="overflow-hidden rounded-xl glass-card shadow-lg">
       <div className="aspect-video w-full overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
@@ -39,13 +46,15 @@ export function ProjectCard({ title, description, image, technologies, link, del
         <div className="mb-4 flex flex-wrap gap-2">
           {technologies.map((tech) => {
             // Check if the tech icon exists in TechIcons
-            const IconComponent = (TechIcons as any)[tech]
+            const IconComponent = (TechIcons as any)[tech];
             return (
-              <div key={tech} className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+              <div
+                key={tech}
+                className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
                 {IconComponent ? <IconComponent className="h-4 w-4" /> : null}
                 <span>{tech}</span>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -54,14 +63,12 @@ export function ProjectCard({ title, description, image, technologies, link, del
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-cv-orange hover:underline"
-          >
+            className="flex items-center gap-1 text-cv-orange hover:underline">
             <span>View Project</span>
             <ExternalLink size={16} />
           </Link>
         )}
       </div>
     </motion.div>
-  )
+  );
 }
-
