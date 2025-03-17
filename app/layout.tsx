@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "John",
   description:
-    "Finding creative solutions to complex problems. With a passion for technology and a deep understanding of programming, I am constantly tinkering with code to improve my skills and stay up-to-date with the latest industry trends.",
+    "Finding creative solutions to complex problems. I am constantly tinkering with code to improve my skills and stay up-to-date with the latest industry trends.",
   openGraph: {
     title: "John Anthony Pecson | Software Engineer",
     description:
