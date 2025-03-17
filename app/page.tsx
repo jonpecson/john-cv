@@ -1,14 +1,16 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ProfileCard } from "@/components/profile-card"
-import { Counter } from "@/components/counter"
-import { SkillCard } from "@/components/skill-card"
-import { ProjectCard } from "@/components/project-card"
-import { ExperienceCard } from "@/components/experience-card"
-import { SectionTitle } from "@/components/section-title"
-import { Layers, Layout } from "lucide-react"
-import * as TechIcons from "@/components/tech-icons"
+import * as TechIcons from "@/components/tech-icons";
+
+import { Layers, Layout } from "lucide-react";
+
+import { Counter } from "@/components/counter";
+import { ExperienceCard } from "@/components/experience-card";
+import { ProfileCard } from "@/components/profile-card";
+import { ProjectCard } from "@/components/project-card";
+import { SectionTitle } from "@/components/section-title";
+import { SkillCard } from "@/components/skill-card";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -22,21 +24,43 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8"
-          >
-            <h1 className="mb-2 text-5xl font-bold text-white md:text-6xl">SOFTWARE</h1>
-            <h1 className="mb-6 text-5xl font-bold text-gray-400 md:text-6xl">ENGINEER</h1>
+            className="mt-8">
+            <h1 className="mb-2 text-5xl font-bold text-white md:text-6xl">
+              SOFTWARE
+            </h1>
+            <h1 className="mb-6 text-5xl font-bold text-gray-400 md:text-6xl">
+              ENGINEER
+            </h1>
 
             <p className="mb-8 text-cv-light-gray">
-              Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into
-              beautifully crafted products.
+              Passionate about creating intuitive and engaging user experiences.
+              Specialize in transforming ideas into beautifully crafted
+              products.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-              <Counter end={8} prefix="+" title="YEARS OF" subtitle="EXPERIENCE" delay={0.4} />
-              <Counter end={46} prefix="+" title="PROJECTS" subtitle="COMPLETED" delay={0.6} />
-              <Counter end={20} prefix="+" title="WORLDWIDE" subtitle="CLIENTS" delay={0.8} />
+              <Counter
+                end={8}
+                prefix="+"
+                title="YEARS OF"
+                subtitle="EXPERIENCE"
+                delay={0.4}
+              />
+              <Counter
+                end={46}
+                prefix="+"
+                title="PROJECTS"
+                subtitle="COMPLETED"
+                delay={0.6}
+              />
+              <Counter
+                end={20}
+                prefix="+"
+                title="WORLDWIDE"
+                subtitle="CLIENTS"
+                delay={0.8}
+              />
             </div>
           </motion.div>
 
@@ -65,13 +89,16 @@ export default function Home() {
         <div className="mx-auto max-w-3xl">
           {/* Recent Projects Section */}
           <section className="mb-16">
-            <SectionTitle title="Recent Projects" delay={0.2} />
+            <SectionTitle
+              title="Recent Projects"
+              delay={0.2}
+            />
 
             <div className="grid grid-cols-1 gap-6">
               <ProjectCard
                 title="Workbeaver Website / Authentication API"
                 description="Developed a website for WorkBeaver, featuring an intuitive interface for automating repetitive tasks. Implemented a backend API to manage authentication and authorization."
-                image="https://ik.imagekit.io/onefestival/cv/work-beaver.png?updatedAt=1742224955775"
+                image="https://ik.imagekit.io/onefestival/cv/work-beaver.png?tr=w-800"
                 technologies={["NextJS", "React", "NodeJS"]}
                 link="Demo"
                 delay={0.3}
@@ -80,7 +107,7 @@ export default function Home() {
               <ProjectCard
                 title="Safe - Midman App"
                 description="Secure platform to protect users from fraud risks. Built with modern technologies to ensure security and performance."
-                image="https://ik.imagekit.io/onefestival/cv/safe-midman.png?updatedAt=1742224732064"
+                image="https://ik.imagekit.io/onefestival/cv/safe-midman.png??tr=w-800"
                 technologies={["React", "NodeJS", "AWS"]}
                 link="Demo"
                 delay={0.4}
@@ -89,7 +116,7 @@ export default function Home() {
               <ProjectCard
                 title="One Festival App"
                 description="Comprehensive app for festival-goers with maps, line-up info, and real-time updates. Available on both iOS and Android platforms."
-                image="https://ik.imagekit.io/onefestival/cv/one-festival-website.png?updatedAt=1742225198654"
+                image="https://ik.imagekit.io/onefestival/cv/one-festival-website.png??tr=w-800"
                 technologies={["ReactNative", "NodeJS"]}
                 link="Demo"
                 delay={0.5}
@@ -99,7 +126,10 @@ export default function Home() {
 
           {/* Work Experience Section */}
           <section className="mb-16">
-            <SectionTitle title="Work Experience" delay={0.6} />
+            <SectionTitle
+              title="Work Experience"
+              delay={0.6}
+            />
 
             <div className="space-y-6">
               <ExperienceCard
@@ -152,15 +182,17 @@ export default function Home() {
 
           {/* Skills Section */}
           <section className="mb-16">
-            <SectionTitle title="Technical Skills" delay={1.1} />
+            <SectionTitle
+              title="Technical Skills"
+              delay={1.1}
+            />
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.2 }}
-                className="rounded-xl glass-card p-6"
-              >
+                className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
@@ -190,8 +222,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.3 }}
-                className="rounded-xl glass-card p-6"
-              >
+                className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Backend</h3>
                 <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
@@ -217,8 +248,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 }}
-                className="rounded-xl glass-card p-6"
-              >
+                className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Mobile</h3>
                 <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
@@ -240,9 +270,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.5 }}
-                className="rounded-xl glass-card p-6"
-              >
-                <h3 className="mb-4 text-xl font-bold text-white">DevOps & Cloud</h3>
+                className="rounded-xl glass-card p-6">
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  DevOps & Cloud
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
                     <TechIcons.AWS className="h-4 w-4" />
@@ -267,16 +298,19 @@ export default function Home() {
 
           {/* Contact Section */}
           <section className="mb-16">
-            <SectionTitle title="Get In Touch" delay={1.6} />
+            <SectionTitle
+              title="Get In Touch"
+              delay={1.6}
+            />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.7 }}
-              className="rounded-xl glass-card p-6"
-            >
+              className="rounded-xl glass-card p-6">
               <p className="mb-6 text-cv-light-gray">
-                I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                I'm always open to discussing new projects, creative ideas or
+                opportunities to be part of your vision.
               </p>
 
               <div className="space-y-4">
@@ -290,8 +324,7 @@ export default function Home() {
                       href="https://johnpecson.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-cv-orange hover:underline"
-                    >
+                      className="text-cv-orange hover:underline">
                       johnpecson.com
                     </a>
                   </div>
@@ -303,7 +336,9 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <a href="mailto:jonpecson.io@gmail.com" className="text-cv-orange hover:underline">
+                    <a
+                      href="mailto:jonpecson.io@gmail.com"
+                      className="text-cv-orange hover:underline">
                       jonpecson.io@gmail.com
                     </a>
                   </div>
@@ -315,7 +350,9 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-medium text-white">Location</p>
-                    <p className="text-cv-light-gray">Talisay City, Negros Occidental, Philippines</p>
+                    <p className="text-cv-light-gray">
+                      Talisay City, Negros Occidental, Philippines
+                    </p>
                   </div>
                 </div>
               </div>
@@ -324,11 +361,13 @@ export default function Home() {
 
           {/* Footer */}
           <footer className="pb-8 pt-8 text-center text-cv-light-gray">
-            <p>© {new Date().getFullYear()} John Anthony Pecson. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} John Anthony Pecson. All rights
+              reserved.
+            </p>
           </footer>
         </div>
       </div>
     </main>
-  )
+  );
 }
-
