@@ -5,6 +5,7 @@ import * as TechIcons from "@/components/tech-icons";
 import { Layers, Layout } from "lucide-react";
 
 import { Counter } from "@/components/counter";
+import { DownloadCVCard } from "@/components/download-cv-card";
 import { ExperienceCard } from "@/components/experience-card";
 import { ProfileCard } from "@/components/profile-card";
 import { ProjectCard } from "@/components/project-card";
@@ -25,7 +26,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8">
-            <h1 className="mb-2 text-5xl font-bold text-white md:text-6xl">
+            {/* <h1 className="mb-2 text-5xl font-bold text-white md:text-6xl">
               SOFTWARE
             </h1>
             <h1 className="mb-6 text-5xl font-bold text-gray-400 md:text-6xl">
@@ -36,7 +37,7 @@ export default function Home() {
               Passionate about creating intuitive and engaging user experiences.
               Specialize in transforming ideas into beautifully crafted
               products.
-            </p>
+            </p> */}
 
             {/* Stats */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -66,20 +67,29 @@ export default function Home() {
 
           {/* Skill Cards */}
           <div className="mt-8 grid grid-cols-1 gap-6">
-            <SkillCard
-              title="FULL STACK"
-              subtitle="DEVELOPER"
+            <DownloadCVCard
+              title="Let's Work Together!"
+              subtitle="View My CV"
+              link="/path/to/your-cv.pdf"
               color="orange"
-              icon={<Layers className="h-8 w-8 text-white" />}
-              delay={1.0}
+              icon={<Layout className="h-8 w-8 text-white" />}
+              delay={1.2}
             />
-            <SkillCard
-              title="MOBILE & WEB"
-              subtitle="APPLICATIONS"
+
+            {/* <SkillCard
+              title="INTERESTED IN WORKING TOGETHER?"
+              subtitle="DOWNLOAD MY CV"
+              color="orange"
+              icon={<Layout className="h-8 w-8 text-cv-dark" />}
+              delay={1.2}
+            /> */}
+            {/* <SkillCard
+              title="INTERESTED IN WORKING TOGETHER"
+              subtitle="DOWNLOAD MY CV"
               color="neon"
               icon={<Layout className="h-8 w-8 text-cv-dark" />}
               delay={1.2}
-            />
+            /> */}
           </div>
         </div>
       </div>
@@ -96,9 +106,24 @@ export default function Home() {
 
             <div className="grid grid-cols-1 gap-6">
               <ProjectCard
+                title="Empire Crypto Trading Platform"
+                description="Rebuilt the social trading platform for crypto enthusiasts with real-time market feeds, community discussions, and portfolio sharing. Architected to handle 50K+ monthly active traders with WebSocket-powered live updates and secure JWT authentication. Enhanced engagement by 3x through optimized UI/UX and performance."
+                image="/images/empire.webp"
+                technologies={[
+                  "Next.js",
+                  "Nest.js",
+                  "WebSockets",
+                  "AWS (ECS, CloudFront)",
+                  "PostgreSQL",
+                  "Docker",
+                ]}
+                delay={0.3}
+                link="https://empirecryptotrading.com/"
+              />
+              <ProjectCard
                 title="Workbeaver Website / Authentication API"
                 description="WorkBeaver is a productivity platform designed to eliminate manual, repetitive tasks in business workflows by leveraging automation. The system integrates with existing tools (e.g., CRM, email, spreadsheets) to streamline operations, reduce human error, and free up employees for strategic work."
-                image="https://ik.imagekit.io/onefestival/cv/work-beaver.png?tr=w-800"
+                image="/images/workbeaver.webp"
                 technologies={["NextJS", "React", "NodeJS"]}
                 delay={0.3}
                 link="https://workbeaver.com/"
@@ -132,49 +157,94 @@ export default function Home() {
             />
 
             <div className="space-y-6">
-              <ExperienceCard
-                title="Freelance Software Engineer"
+              {/* <ExperienceCard
+                title="Full-Stack Developer & Cloud Architect"
                 company="Self-employed"
                 period="Present"
                 description="Working on various client projects as a full-stack developer, delivering custom solutions and technical expertise."
-                technologies={["React", "NextJS", "NodeJS", "AWS"]}
+                technologies={[
+                  "React",
+                  "Next.js",
+                  "Node.js",
+                  "AWS (Lambda, DynamoDB, ECS)",
+                  "Docker",
+                  "PostgreSQL",
+                ]}
+                delay={0.7}
+              /> */}
+
+              <ExperienceCard
+                title="Lead Full-Stack Developer & Architect"
+                company="Empire Crypto Trading (Remote)"
+                period="Feb 2025 - Present"
+                description={[
+                  "Rebuilt social trading platform for crypto traders using Next.js/Nest.js, increasing user engagement by 3x",
+                  "Architected real-time features including live market feeds, chat, and portfolio sharing using WebSockets",
+                  "Optimized AWS infrastructure (ECS, CloudFront) to handle 50K+ monthly active traders",
+                  "Implemented JWT authentication and rate limiting for enhanced security",
+                ]}
+                technologies={[
+                  "Next.js",
+                  "Nest.js",
+                  "WebSockets",
+                  "AWS (ECS, Lambda, CloudFront)",
+                  "PostgreSQL",
+                  "Docker",
+                ]}
                 delay={0.7}
               />
 
               <ExperienceCard
                 title="Full Stack Developer"
-                company="Workbeaver (UK)"
+                company="Workbeaver (UK) | Productivity Platform"
                 period="Sep 2024 - Jan 2025"
                 description={[
-                  "Developed an identity service provider using Node.js, Docker, and Amazon DynamoDB.",
-                  "Designed and implemented a secure authentication system, ensuring seamless user access.",
-                  "Leveraged AWS CloudWatch for real-time monitoring and system optimization.",
+                  "Delivered custom full-stack solutions for 20+ clients across industries (SaaS, e-commerce, fintech), leveraging React, Node.js, and AWS.",
+                  "Architected scalable cloud infrastructure (Docker, AWS ECS, Lambda) for startups, reducing deployment costs by 35% vs. traditional hosting.",
+                  "Implemented CI/CD pipelines (GitHub Actions, Jenkins) to automate testing/deployment, cutting release cycles by 50%.",
                 ]}
-                technologies={["NodeJS", "AWS", "React"]}
+                technologies={[
+                  "Node.js",
+                  "AWS (DynamoDB, CloudWatch)",
+                  "Docker",
+                  "OAuth 2.0",
+                ]}
                 delay={0.8}
               />
 
               <ExperienceCard
                 title="Co-Founder / CTO"
-                company="Safe Technology Ventures (Singapore)"
+                company="Safe Technology Ventures (Singapore) | Dispute Resolution Platform for E-commerce (FinTech)"
                 period="Jul 2023 - May 2024"
                 description={[
-                  "Led the development of a full-stack dispute management system for secure e-commerce transactions.",
-                  "Built a scalable platform with Node.js, Next.js, and PostgreSQL, streamlining dispute resolution.",
+                  "Architected a secure dispute resolution platform for e-commerce transactions, enhancing user trust and safety.",
+                  "Implemented a microservices architecture using Node.js and Next.js, ensuring scalability and maintainability.",
+                  "Integrated advanced security features, including end-to-end encryption and multi-factor authentication.",
+                  "Led a team of developers in building a robust API for seamless integration with e-commerce platforms.",
+                  "Collaborated with cross-functional teams to align product features with business goals and user needs.",
+                  "Utilized AWS services for cloud infrastructure, ensuring high availability and disaster recovery.",
                 ]}
-                technologies={["NextJS", "NodeJS", "Database"]}
+                technologies={[
+                  "Next.js",
+                  "Node.js",
+                  "PostgreSQL",
+                  "AWS",
+                  "EC2",
+                ]}
                 delay={0.9}
               />
 
               <ExperienceCard
-                title="CTO / Blockchain Consultant"
-                company="Tradeshare LLC (USA)"
+                title="Lead Software Engineer & Product Designer"
+                company="Tradeshare LLC (USA) | Decentralized Lending Platform (DeFi)"
                 period="Dec 2020 - Dec 2021"
                 description={[
-                  "Developed scalable backend services for a global trading platform using Node.js and PostgreSQL.",
-                  "Integrated third-party financial APIs to enhance real-time data exchange and transaction accuracy.",
+                  "Designed smart contracts (Solidity) for collateralized loans, interest rate models, and liquidation mechanisms, reducing bad debt by 90% vs. industry averages.",
+                  "Developed a React-based frontend with Web3.js for seamless user interaction with the blockchain.",
+                  "Implemented a secure wallet integration for user transactions, enhancing security and user experience.",
+                  "Created a real-time analytics dashboard for monitoring loan performance and user activity.",
                 ]}
-                technologies={["NodeJS", "Database", "Backend"]}
+                technologies={["React", "NodeJS", "Solidity", "Web3.js"]}
                 delay={1.0}
               />
             </div>

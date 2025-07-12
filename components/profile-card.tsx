@@ -43,13 +43,28 @@ export function ProfileCard() {
         </h2>
 
         <div className="mb-6 flex items-center space-x-2">
-          <div className="h-2 w-2 rounded-full bg-cv-orange"></div>
-          <span className="text-gray-300">Software Engineer</span>
+          {/* <div className="h-2 w-2 rounded-full bg-cv-orange"></div> */}
+          <span className="text-gray-300 text-center font-semibold">
+            I’m a product designer and developer...
+          </span>
         </div>
 
-        <p className="mb-6 text-center text-gray-300">
-          A Software Engineer who has developed countless innovative solutions.
-        </p>
+        <div className="mb-6 text-left text-gray-300 text-sm max-w-sm">
+          <p>
+            I’m a Software Engineer and Architect with 10+ years of building
+            high-traffic web and mobile applications. I specialize in:
+          </p>
+          <ul className="mt-2 list-disc list-inside text-left mx-auto max-w-sm">
+            <li>Full-stack development (React, Node.js)</li>
+            <li>Cloud infrastructure (AWS, Docker)</li>
+            <li>CI/CD pipelines (GitHub Actions, Jenkins)</li>
+            <li>System design for scalability and security</li>
+          </ul>
+          <p className="mt-2">
+            I don’t just write code—I engineer systems that handle millions of
+            users, deploy seamlessly, and stay cost-efficient.
+          </p>
+        </div>
 
         <div className="flex space-x-4">
           <Link
