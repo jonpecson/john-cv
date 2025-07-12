@@ -70,7 +70,7 @@ export default function Home() {
             <DownloadCVCard
               title="Let's Work Together!"
               subtitle="View My CV"
-              link="/path/to/your-cv.pdf"
+              link="https://docs.google.com/document/d/1WOdMlrbyTwiEgJU-14aRi4_mHWXFCQ5m-hgdkp8zcrw/edit?usp=sharing"
               color="orange"
               icon={<Layout className="h-8 w-8 text-white" />}
               delay={1.2}
