@@ -97,7 +97,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-6">
               <ProjectCard
                 title="Workbeaver Website / Authentication API"
-                description="Developed a website for WorkBeaver, featuring an intuitive interface for automating repetitive tasks. Implemented a backend API to manage authentication and authorization."
+                description="WorkBeaver is a productivity platform designed to eliminate manual, repetitive tasks in business workflows by leveraging automation. The system integrates with existing tools (e.g., CRM, email, spreadsheets) to streamline operations, reduce human error, and free up employees for strategic work."
                 image="https://ik.imagekit.io/onefestival/cv/work-beaver.png?tr=w-800"
                 technologies={["NextJS", "React", "NodeJS"]}
                 delay={0.3}
