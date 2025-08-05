@@ -18,7 +18,7 @@ export function BlogSection({ posts, delay = 0 }: BlogSectionProps) {
 
   return (
     <section className="mb-16">
-      <SectionTitle title="Latest Blog Posts" delay={delay} />
+      <SectionTitle title="Recent Posts" delay={delay} />
       
       {featuredPosts.length > 0 ? (
         <>

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import type React from "react";
+import { Navigation } from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,8 +64,6 @@ export const metadata: Metadata = {
       "https://ik.imagekit.io/onefestival/cv/john-pecson-website.png??tr=w-1200",
     ],
   },
-  themeColor: "#1a202c",
-  colorScheme: "dark",
   robots: {
     index: true,
     follow: true,
@@ -84,6 +83,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+};
+
+export const viewport = {
+  themeColor: "#1a202c",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
