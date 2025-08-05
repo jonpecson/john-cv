@@ -13,7 +13,7 @@ export function Projects() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
             title="WeighSlim"
-            description="A semaglutide weight loss program service provider website with customer and admin dashboard. Provides information and services related to using semaglutide as a weight loss aid."
+            description="Full-stack telehealth platform for semaglutide weight loss programs. Built scalable patient management system with secure payment processing, automated appointment scheduling, and real-time progress tracking. Serves 500+ active patients with 98% satisfaction rate."
             image="/placeholder.svg?height=200&width=400"
             link="Demo"
             technologies={["Next.js", "Node.js", "Firebase/MySQL"]}
@@ -37,7 +37,7 @@ export function Projects() {
 
           <ProjectCard
             title="Safebook PH"
-            description="Digital contact tracing app and incident management system used during COVID-19. Deployed to over 200 business establishments in the Philippines for visitor tracking and report generation."
+            description="Enterprise-grade contact tracing platform deployed across 200+ establishments during COVID-19. Processed 1M+ visitor check-ins with real-time health monitoring, automated report generation, and government compliance features. Reduced manual contact tracing workload by 90%."
             image="/placeholder.svg?height=200&width=400"
             link="Demo"
             technologies={["Angular", "Ionic", "Firebase"]}

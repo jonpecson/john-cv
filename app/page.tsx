@@ -412,8 +412,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 2.1 }}
               className="rounded-xl glass-card p-6">
               <p className="mb-6 text-cv-light-gray">
-                I'm always open to discussing new projects, creative ideas or
-                opportunities to be part of your vision.
+                Ready to discuss your next project? Let's build something exceptional together.
               </p>
 
               <div className="space-y-4">
@@ -454,7 +453,7 @@ export default function Home() {
                   <div>
                     <p className="font-medium text-white">Location</p>
                     <p className="text-cv-light-gray">
-                      Talisay City, Negros Occidental, Philippines
+                      Philippines
                     </p>
                   </div>
                 </div>

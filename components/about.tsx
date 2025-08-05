@@ -13,22 +13,15 @@ export function About() {
             <h3 className="mb-4 text-xl font-semibold text-primary md:text-2xl">Professional Profile</h3>
             <div className="space-y-4 text-gray-300">
               <p>
-                As a dynamic problem solver, I thrive on challenges and enjoy finding creative solutions to complex
-                problems. With a passion for technology and a deep understanding of programming concepts, I am
-                constantly tinkering with code to improve my skills and stay up-to-date with the latest industry trends.
+                I'm a Senior Software Engineer with 10+ years of experience building scalable, high-traffic applications that serve millions of users. I specialize in architecting robust systems from concept to deployment, with deep expertise in full-stack development, blockchain technologies, and cloud infrastructure.
               </p>
 
               <p>
-                At the same time, I understand the importance of balancing functionality with aesthetics. I have a keen
-                eye for design and always strive to ensure that my code not only functions flawlessly, but also looks
-                great. Whether I'm working on a front-end or back-end project, I pay close attention to every detail to
-                ensure that the final product meets both functional and aesthetic requirements.
+                My approach combines technical excellence with business impact—I don't just write code, I engineer solutions that drive growth, reduce costs, and scale efficiently. Whether it's building DeFi platforms, optimizing CI/CD pipelines, or designing microservices architecture, I deliver systems that perform under pressure.
               </p>
 
               <p>
-                With a strong work ethic and an eagerness to learn, I am always looking for new challenges and
-                opportunities to expand my skill set. I am confident that my combination of problem-solving abilities
-                and design skills make me a valuable asset to any development team.
+                I thrive in fast-paced environments where innovation meets reliability, and I'm passionate about mentoring teams and establishing engineering best practices that last. Ready to architect your next breakthrough solution.
               </p>
             </div>
           </div>
@@ -40,7 +33,7 @@ export function About() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <span className="font-semibold text-primary">Location:</span>
-                    <span>Talisay City, Negros Occidental, Philippines</span>
+                    <span>Philippines</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="font-semibold text-primary">Email:</span>

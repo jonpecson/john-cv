@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "John Pecson", url: "https://johnpecson.com" }],
   description:
-    "Building scalable, secure digital products with 10+ years of experience in full-stack development, blockchain, and cloud architecture.",
+    "Senior Full-Stack Engineer specializing in scalable web applications, DeFi platforms, and cloud architecture. 10+ years building high-performance systems with React, Node.js, and AWS. Available for consulting and full-time opportunities.",
   openGraph: {
     title: "John Pecson | Senior Full-Stack Engineer & Architect",
     description:

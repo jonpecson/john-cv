@@ -16,7 +16,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="text-white">Contact Information</CardTitle>
                 <CardDescription className="text-gray-400">
-                  Feel free to reach out through any of these channels
+                  Ready to discuss your next project? Let's build something exceptional together.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -34,7 +34,7 @@ export function Contact() {
                   <MapPin className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium text-white">Location</p>
-                    <p className="text-gray-300">Talisay City, Negros Occidental, Philippines</p>
+                    <p className="text-gray-300">Philippines</p>
                   </div>
                 </div>
               </CardContent>
