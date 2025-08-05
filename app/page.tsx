@@ -11,9 +11,31 @@ import { ProfileCard } from "@/components/profile-card";
 import { ProjectCard } from "@/components/project-card";
 import { SectionTitle } from "@/components/section-title";
 import { SkillCard } from "@/components/skill-card";
+import { BlogSection } from "@/components/blog-section";
 import { motion } from "framer-motion";
+import { getBlogPosts } from "@/lib/blog";
+import { BlogPost } from "@/types/blog";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const posts = await getBlogPosts();
+        setBlogPosts(posts);
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col bg-gradient-glow lg:flex-row">
       {/* Left column - Fixed */}
@@ -97,11 +119,16 @@ export default function Home() {
       {/* Right column - Scrollable */}
       <div className="w-full p-6 lg:w-7/12 lg:overflow-y-auto lg:p-12">
         <div className="mx-auto max-w-3xl">
+          {/* Blog Section */}
+          {!isLoading && (
+            <BlogSection posts={blogPosts} delay={0.1} />
+          )}
+
           {/* Recent Projects Section */}
           <section className="mb-16">
             <SectionTitle
               title="Recent Projects"
-              delay={0.2}
+              delay={0.5}
             />
 
             <div className="grid grid-cols-1 gap-6">
@@ -117,7 +144,7 @@ export default function Home() {
                   "PostgreSQL",
                   "Docker",
                 ]}
-                delay={0.3}
+                delay={0.6}
                 link="https://empirecryptotrading.com/"
               />
               <ProjectCard
@@ -125,7 +152,7 @@ export default function Home() {
                 description="WorkBeaver is a productivity platform designed to eliminate manual, repetitive tasks in business workflows by leveraging automation. The system integrates with existing tools (e.g., CRM, email, spreadsheets) to streamline operations, reduce human error, and free up employees for strategic work."
                 image="/images/workbeaver.webp"
                 technologies={["NextJS", "React", "NodeJS"]}
-                delay={0.3}
+                delay={0.7}
                 link="https://workbeaver.com/"
               />
 
@@ -134,7 +161,7 @@ export default function Home() {
                 description="Secure platform to protect users from fraud risks. Built with modern technologies to ensure security and performance."
                 image="https://ik.imagekit.io/onefestival/cv/safe-midman.png??tr=w-800"
                 technologies={["React", "NodeJS", "AWS"]}
-                delay={0.4}
+                delay={0.8}
                 link="https://www.linkedin.com/posts/earonvillamora_ang-midman-app-ng-bayan-safe-wins-best-activity-7105158092476096512-coPe/?trk=public_profile_like_view"
               />
 
@@ -144,7 +171,7 @@ export default function Home() {
                 image="https://ik.imagekit.io/onefestival/cv/one-festival-website.png??tr=w-800"
                 technologies={["ReactNative", "NodeJS"]}
                 link="https://onefestival.framer.website/"
-                delay={0.5}
+                delay={0.9}
               />
             </div>
           </section>
@@ -153,7 +180,7 @@ export default function Home() {
           <section className="mb-16">
             <SectionTitle
               title="Work Experience"
-              delay={0.6}
+              delay={1.0}
             />
 
             <div className="space-y-6">
@@ -191,7 +218,7 @@ export default function Home() {
                   "PostgreSQL",
                   "Docker",
                 ]}
-                delay={0.7}
+                delay={1.1}
               />
 
               <ExperienceCard
@@ -209,7 +236,7 @@ export default function Home() {
                   "Docker",
                   "OAuth 2.0",
                 ]}
-                delay={0.8}
+                delay={1.2}
               />
 
               <ExperienceCard
@@ -231,7 +258,7 @@ export default function Home() {
                   "AWS",
                   "EC2",
                 ]}
-                delay={0.9}
+                delay={1.3}
               />
 
               <ExperienceCard
@@ -245,7 +272,7 @@ export default function Home() {
                   "Created a real-time analytics dashboard for monitoring loan performance and user activity.",
                 ]}
                 technologies={["React", "NodeJS", "Solidity", "Web3.js"]}
-                delay={1.0}
+                delay={1.4}
               />
             </div>
           </section>
@@ -254,14 +281,14 @@ export default function Home() {
           <section className="mb-16">
             <SectionTitle
               title="Technical Skills"
-              delay={1.1}
+              delay={1.5}
             />
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
+                transition={{ duration: 0.5, delay: 1.6 }}
                 className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -291,7 +318,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.3 }}
+                transition={{ duration: 0.5, delay: 1.7 }}
                 className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Backend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -317,7 +344,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 }}
+                transition={{ duration: 0.5, delay: 1.8 }}
                 className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Mobile</h3>
                 <div className="flex flex-wrap gap-2">
@@ -339,7 +366,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
+                transition={{ duration: 0.5, delay: 1.9 }}
                 className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">
                   DevOps & Cloud
@@ -370,13 +397,13 @@ export default function Home() {
           <section className="mb-16">
             <SectionTitle
               title="Get In Touch"
-              delay={1.6}
+              delay={2.0}
             />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 2.1 }}
               className="rounded-xl glass-card p-6">
               <p className="mb-6 text-cv-light-gray">
                 I'm always open to discussing new projects, creative ideas or
