@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionTitle } from "@/components/section-title";
-import { getBlogPosts } from "@/lib/blog";
+import { getBlogPost } from "@/lib/blog";
 import { BlogPost } from "@/types/blog";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import Image from "next/image";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { PortableTextRenderer } from "@/components/portable-text";
 
 export default function BlogPostPage() {
   const params = useParams();
@@ -20,8 +21,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const posts = await getBlogPosts();
-        const foundPost = posts.find(p => p.slug.current === slug);
+        const foundPost = await getBlogPost(slug);
         
         if (foundPost) {
           setPost(foundPost);
@@ -203,26 +203,15 @@ export default function BlogPostPage() {
               </div>
             )}
             
-            <div className="prose prose-invert max-w-none">
-              <p className="text-cv-light-gray leading-relaxed mb-6">
-                This is a demo blog post. In a real implementation, you would render the actual blog content here using a rich text renderer for your CMS content.
-              </p>
-              
-              <p className="text-cv-light-gray leading-relaxed mb-6">
-                The blog feature has been successfully integrated into your portfolio website with a modern design that matches your existing aesthetic. The blog section appears before the "Recent Projects" section as requested.
-              </p>
-              
-              <p className="text-cv-light-gray leading-relaxed">
-                To complete the setup, you would need to:
-              </p>
-              
-              <ul className="text-cv-light-gray leading-relaxed mt-4 space-y-2">
-                <li>• Set up your Sanity Studio</li>
-                <li>• Create blog post schemas in Sanity</li>
-                <li>• Add actual blog content</li>
-                <li>• Implement rich text rendering for blog content</li>
-              </ul>
-            </div>
+            {post.body && post.body.length > 0 ? (
+              <PortableTextRenderer content={post.body} />
+            ) : (
+              <div className="prose prose-invert max-w-none">
+                <p className="text-cv-light-gray leading-relaxed mb-6">
+                  No content available for this blog post.
+                </p>
+              </div>
+            )}
           </motion.div>
         </article>
       </div>

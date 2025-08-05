@@ -1,4 +1,4 @@
-import { client, POSTS_QUERY } from './sanity'
+import { client, POSTS_QUERY, POST_QUERY } from './sanity'
 import { BlogPost } from '@/types/blog'
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
@@ -13,6 +13,20 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     console.log('getBlogPosts: Falling back to mock data')
     // Return mock data for development/demo purposes
     return getMockBlogPosts()
+  }
+}
+
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
+  try {
+    console.log('getBlogPost: Attempting to fetch post with slug:', slug)
+    const post = await client.fetch(POST_QUERY, { slug })
+    console.log('getBlogPost: Sanity fetch successful:', post)
+    return post || null
+  } catch (error) {
+    console.error('getBlogPost: Error fetching blog post:', error)
+    // Try to find in mock data as fallback
+    const mockPosts = getMockBlogPosts()
+    return mockPosts.find(p => p.slug.current === slug) || null
   }
 }
 
