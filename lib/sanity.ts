@@ -23,7 +23,8 @@ export const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(
   publishedAt,
   "author": author->name,
   "categories": categories[]->title,
-  "mainImage": mainImage.asset->url
+  "mainImage": mainImage.asset->url,
+  body
 }`
 
 export const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {

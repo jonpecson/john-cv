@@ -123,6 +123,12 @@ export default function Home() {
           {!isLoading && (
             <BlogSection posts={blogPosts} delay={0.1} />
           )}
+          {isLoading && (
+            <div className="text-white p-4">Loading blog posts...</div>
+          )}
+          {!isLoading && blogPosts.length === 0 && (
+            <div className="text-white p-4">No blog posts found.</div>
+          )}
 
           {/* Recent Projects Section */}
           <section className="mb-16">

@@ -3,10 +3,14 @@ import { BlogPost } from '@/types/blog'
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
+    console.log('getBlogPosts: Attempting to fetch from Sanity...')
     const posts = await client.fetch(POSTS_QUERY)
+    console.log('getBlogPosts: Sanity fetch successful:', posts)
+    console.log('getBlogPosts: Number of posts from Sanity:', posts?.length || 0)
     return posts || []
   } catch (error) {
-    console.error('Error fetching blog posts:', error)
+    console.error('getBlogPosts: Error fetching blog posts:', error)
+    console.log('getBlogPosts: Falling back to mock data')
     // Return mock data for development/demo purposes
     return getMockBlogPosts()
   }
