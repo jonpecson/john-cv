@@ -44,7 +44,7 @@ export function ProfileCard() {
 
         <div className="mb-6 flex items-center space-x-2">
           {/* <div className="h-2 w-2 rounded-full bg-cv-orange"></div> */}
-          <span className="text-gray-300 text-center font-semibold">
+          <span className="text-cv-orange text-center font-semibold">
             Senior Full-Stack Engineer & Solutions Architect
           </span>
         </div>
@@ -53,14 +53,14 @@ export function ProfileCard() {
           <p>
            Senior Software Engineer with 10+ years architecting systems that serve millions of users and process $2M+ in transactions. I build:
           </p>
-          <ul className="mt-2 list-disc list-inside text-left mx-auto max-w-sm">
+          <ul className="mt-2 list-disc list-inside text-left mx-auto max-w-sm ">
          
-            <li className="text-xs pl-4">Full-stack applications (React, Node.js) serving 50K+ concurrent users</li>
-            <li className="text-xs pl-4">Cloud infrastructure (AWS, Docker) reducing costs by 35%</li>
-            <li className="text-xs pl-4">CI/CD pipelines cutting deployment time from hours to minutes</li>
-            <li className="text-xs pl-4">Scalable architectures handling 99.9% uptime at enterprise scale</li>
+            <li className="text-xs pl-4 py-2">Full-stack applications (React, Node.js) serving 50K+ concurrent users</li>
+            <li className="text-xs pl-4 py-2">Cloud infrastructure (AWS, Docker) reducing costs by 35%</li>
+            <li className="text-xs pl-4 py-2">CI/CD pipelines cutting deployment time from hours to minutes</li>
+            <li className="text-xs pl-4 py-2">Scalable architectures handling 99.9% uptime at enterprise scale</li>
           </ul>
-          <p className="mt-2 italic text-xs">
+          <p className="mt-2 italic ">
             I don't just write code—I architect solutions that scale to millions, deploy with zero downtime, and deliver measurable ROI.
           </p>
         </div>
