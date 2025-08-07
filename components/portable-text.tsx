@@ -114,6 +114,44 @@ const components: PortableTextComponents = {
         </div>
       );
     },
+    table: ({ value }) => {
+      if (!value?.rows || value.rows.length === 0) {
+        return null;
+      }
+
+      return (
+        <div className="my-6 overflow-x-auto">
+          <table className="w-full border-collapse border border-gray-600 rounded-lg overflow-hidden">
+            <tbody>
+              {value.rows.map((row: any, rowIndex: number) => (
+                <tr
+                  key={rowIndex}
+                  className={
+                    rowIndex === 0
+                      ? "bg-gray-800"
+                      : "bg-gray-900 hover:bg-gray-800"
+                  }>
+                  {row.cells?.map((cell: any, cellIndex: number) => {
+                    const Tag = cell.isHeader ? "th" : "td";
+                    return (
+                      <Tag
+                        key={cellIndex}
+                        className={`px-4 py-3 text-left border border-gray-600 ${
+                          cell.isHeader
+                            ? "bg-gray-700 text-white font-semibold"
+                            : "text-cv-light-gray"
+                        }`}>
+                        {cell.text || ""}
+                      </Tag>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    },
   },
 };
 

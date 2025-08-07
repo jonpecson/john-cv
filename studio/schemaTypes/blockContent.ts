@@ -1,4 +1,4 @@
-import {defineType, defineArrayMember} from 'sanity'
+import {defineArrayMember, defineType} from 'sanity'
 
 export default defineType({
   title: 'Block Content',
@@ -16,7 +16,10 @@ export default defineType({
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        {title: 'Bullet', value: 'bullet'},
+        {title: 'Numbered', value: 'number'},
+      ],
       marks: {
         decorators: [
           {title: 'Strong', value: 'strong'},
@@ -46,7 +49,7 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
-        }
+        },
       ],
     }),
     defineArrayMember({
@@ -55,6 +58,10 @@ export default defineType({
       options: {
         withFilename: true,
       },
+    }),
+    defineArrayMember({
+      type: 'table',
+      title: 'Table',
     }),
   ],
 })
