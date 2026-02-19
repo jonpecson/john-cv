@@ -43,6 +43,9 @@ export function Navigation() {
             <Link href="#skills" className="text-gray-300 hover:text-primary">
               Skills
             </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-primary">
+              Blog
+            </Link>
             <Link href="#contact" className="text-gray-300 hover:text-primary">
               Contact
             </Link>
@@ -87,6 +90,9 @@ export function Navigation() {
             <Link href="#skills" className="text-gray-300 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
               Skills
             </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              Blog
+            </Link>
             <Link href="#contact" className="text-gray-300 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </Link>
@@ -101,4 +107,3 @@ export function Navigation() {
     </nav>
   )
 }
-

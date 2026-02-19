@@ -8,19 +8,24 @@ import { Navigation } from "@/components/navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Pecson | Senior Full-Stack Engineer & Architect",
+  title: "John Pecson | Full-Stack Engineer | Frontend & Web3",
   keywords: [
     "John Pecson",
     "Senior Software Engineer",
-    "Solutions Architect",
     "Full-stack Developer",
     "Blockchain Developer",
+    "Web3 Developer",
     "DeFi Engineer",
     "React Expert",
     "Next.js Specialist",
-    "Nest.js Developer",
+    "NestJS Developer",
+    "Node.js Engineer",
+    "Solidity Developer",
+    "Ethers.js",
+    "Web3.js",
     "AWS Architect",
-    "Web3 Developer",
+    "NEM Blockchain",
+    "ProximaX",
     "Smart Contract Engineer",
     "FinTech Developer",
     "High-Traffic Systems",
@@ -28,20 +33,20 @@ export const metadata: Metadata = {
     "Real-time Applications",
     "WebSocket Implementation",
     "CI/CD Pipelines",
-    "Serverless Architecture",
-    "Performance Optimization",
-    "Security Hardening",
+    "TypeScript",
+    "PostgreSQL",
+    "Docker",
     "Technical Leadership",
     "System Design",
     "Scalable Infrastructure",
   ],
   authors: [{ name: "John Pecson", url: "https://johnpecson.com" }],
   description:
-    "Senior Full-Stack Engineer specializing in scalable web applications, DeFi platforms, and cloud architecture. 10+ years building high-performance systems with React, Node.js, and AWS. Available for consulting and full-time opportunities.",
+    "Senior Full-Stack Engineer with 8+ years building scalable web applications, blockchain solutions, and real-time trading platforms. Specializing in React, Next.js, NestJS, Solidity, and AWS cloud architecture.",
   openGraph: {
-    title: "John Pecson | Senior Full-Stack Engineer & Architect",
+    title: "John Pecson | Full-Stack Engineer | Frontend & Web3",
     description:
-      "Specializing in high-performance web applications, DeFi platforms, and enterprise-grade solutions with React, Node.js, and AWS.",
+      "8+ years building scalable web applications, blockchain solutions, and real-time trading platforms with React, Next.js, NestJS, and AWS.",
     images: [
       {
         url: "https://ik.imagekit.io/onefestival/cv/john-pecson-website.png??tr=w-1200",
@@ -57,9 +62,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@jonpecson",
     creator: "@jonpecson",
-    title: "John Pecson | Senior Full-Stack Engineer",
+    title: "John Pecson | Full-Stack Engineer | Frontend & Web3",
     description:
-      "Architecting scalable web applications and blockchain solutions with React, Node.js, and AWS.",
+      "8+ years building scalable web applications, blockchain solutions, and real-time trading platforms with React, Next.js, NestJS, and AWS.",
     images: [
       "https://ik.imagekit.io/onefestival/cv/john-pecson-website.png??tr=w-1200",
     ],
@@ -75,7 +80,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon-32x32.png",
   },

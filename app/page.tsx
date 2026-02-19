@@ -48,19 +48,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8">
-            {/* <h1 className="mb-2 text-5xl font-bold text-white md:text-6xl">
-              SOFTWARE
-            </h1>
-            <h1 className="mb-6 text-5xl font-bold text-gray-400 md:text-6xl">
-              ENGINEER
-            </h1>
-
-            <p className="mb-8 text-cv-light-gray">
-              Passionate about creating intuitive and engaging user experiences.
-              Specialize in transforming ideas into beautifully crafted
-              products.
-            </p> */}
-
             {/* Stats */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <Counter
@@ -92,26 +79,11 @@ export default function Home() {
             <DownloadCVCard
               title="Let's Work Together!"
               subtitle="View My CV"
-              link="https://docs.google.com/document/d/1WOdMlrbyTwiEgJU-14aRi4_mHWXFCQ5m-hgdkp8zcrw/edit?usp=sharing"
+              link="https://docs.google.com/document/d/1N2Xifdfg5L1C_mr51tGv-72vC6tP2YWV/edit?usp=sharing&ouid=105709968836095098027&rtpof=true&sd=true"
               color="orange"
               icon={<Layout className="h-8 w-8 text-white" />}
               delay={1.2}
             />
-
-            {/* <SkillCard
-              title="INTERESTED IN WORKING TOGETHER?"
-              subtitle="DOWNLOAD MY CV"
-              color="orange"
-              icon={<Layout className="h-8 w-8 text-cv-dark" />}
-              delay={1.2}
-            /> */}
-            {/* <SkillCard
-              title="INTERESTED IN WORKING TOGETHER"
-              subtitle="DOWNLOAD MY CV"
-              color="neon"
-              icon={<Layout className="h-8 w-8 text-cv-dark" />}
-              delay={1.2}
-            /> */}
           </div>
         </div>
       </div>
@@ -144,7 +116,7 @@ export default function Home() {
                 image="/images/empire.webp"
                 technologies={[
                   "Next.js",
-                  "Nest.js",
+                  "NestJS",
                   "WebSockets",
                   "AWS (ECS, CloudFront)",
                   "PostgreSQL",
@@ -154,29 +126,26 @@ export default function Home() {
                 link="https://empirecryptotrading.com/"
               />
               <ProjectCard
-                title="Workbeaver Website / Authentication API"
-                description="WorkBeaver is a productivity platform designed to eliminate manual, repetitive tasks in business workflows by leveraging automation. The system integrates with existing tools (e.g., CRM, email, spreadsheets) to streamline operations, reduce human error, and free up employees for strategic work."
-                image="/images/workbeaver.webp"
-                technologies={["NextJS", "React", "NodeJS"]}
+                title="Official Blockchain Wallet Applications"
+                description="Developed official wallet applications for both NEM and ProximaX blockchain ecosystems. Built cross-platform mobile wallets enabling users to manage digital assets, send/receive tokens, and interact with blockchain networks. Implemented secure key management and transaction signing."
+                image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop"
+                technologies={["Ionic", "Angular", "TypeScript", "NEM SDK", "ProximaX SDK", "Cordova"]}
                 delay={0.7}
-                link="https://workbeaver.com/"
               />
 
               <ProjectCard
-                title="Safe - Midman App"
-                description="Secure platform to protect users from fraud risks. Built with modern technologies to ensure security and performance."
-                image="https://ik.imagekit.io/onefestival/cv/safe-midman.png??tr=w-800"
-                technologies={["React", "NodeJS", "AWS"]}
+                title="ProximaX Blockchain Network Deployment"
+                description="Led the deployment and configuration of ProximaX blockchain network infrastructure. Set up validator nodes, configured network parameters, and established monitoring systems. Ensured network stability and performance across distributed node infrastructure."
+                image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop"
+                technologies={["Linux", "Docker", "Blockchain", "Node Configuration", "Network Monitoring"]}
                 delay={0.8}
-                link="https://www.linkedin.com/posts/earonvillamora_ang-midman-app-ng-bayan-safe-wins-best-activity-7105158092476096512-coPe/?trk=public_profile_like_view"
               />
 
               <ProjectCard
-                title="One Festival App"
-                description="Comprehensive app for festival-goers with maps, line-up info, and real-time updates. Available on both iOS and Android platforms."
-                image="https://ik.imagekit.io/onefestival/cv/one-festival-website.png??tr=w-800"
-                technologies={["ReactNative", "NodeJS"]}
-                link="https://onefestival.framer.website/"
+                title="Core Banking System & eWallet (Panama)"
+                description="Built a core banking system and eWallet platform for a Panama-based financial institution. Implemented secure transaction processing, multi-currency support, and compliance features. Developed RESTful APIs for seamless integration with third-party payment systems."
+                image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop"
+                technologies={["Angular", "Node.js", "PostgreSQL", "Docker", "REST APIs"]}
                 delay={0.9}
               />
             </div>
@@ -190,35 +159,19 @@ export default function Home() {
             />
 
             <div className="space-y-6">
-              {/* <ExperienceCard
-                title="Full-Stack Developer & Cloud Architect"
-                company="Self-employed"
-                period="Present"
-                description="Working on various client projects as a full-stack developer, delivering custom solutions and technical expertise."
-                technologies={[
-                  "React",
-                  "Next.js",
-                  "Node.js",
-                  "AWS (Lambda, DynamoDB, ECS)",
-                  "Docker",
-                  "PostgreSQL",
-                ]}
-                delay={0.7}
-              /> */}
-
               <ExperienceCard
-                title="Lead Full-Stack Developer & Architect"
+                title="Lead Software Engineer"
                 company="Empire Crypto Trading (Remote)"
                 period="Feb 2025 - Present"
                 description={[
-                  "Rebuilt social trading platform for crypto traders using Next.js/Nest.js, increasing user engagement by 3x",
+                  "Rebuilt social trading platform for crypto traders using Next.js/NestJS, increasing user engagement by 3x",
                   "Architected real-time features including live market feeds, chat, and portfolio sharing using WebSockets",
                   "Optimized AWS infrastructure (ECS, CloudFront) to handle 50K+ monthly active traders",
                   "Implemented JWT authentication and rate limiting for enhanced security",
                 ]}
                 technologies={[
                   "Next.js",
-                  "Nest.js",
+                  "NestJS",
                   "WebSockets",
                   "AWS (ECS, Lambda, CloudFront)",
                   "PostgreSQL",
@@ -228,57 +181,78 @@ export default function Home() {
               />
 
               <ExperienceCard
-                title="Full Stack Developer"
-                company="Workbeaver (UK) | Productivity Platform"
-                period="Sep 2024 - Jan 2025"
-                description={[
-                  "Delivered custom full-stack solutions for 20+ clients across industries (SaaS, e-commerce, fintech), leveraging React, Node.js, and AWS.",
-                  "Architected scalable cloud infrastructure (Docker, AWS ECS, Lambda) for startups, reducing deployment costs by 35% vs. traditional hosting.",
-                  "Implemented CI/CD pipelines (GitHub Actions, Jenkins) to automate testing/deployment, cutting release cycles by 50%.",
-                ]}
-                technologies={[
-                  "Node.js",
-                  "AWS (DynamoDB, CloudWatch)",
-                  "Docker",
-                  "OAuth 2.0",
-                ]}
-                delay={1.2}
-              />
-
-              <ExperienceCard
-                title="Co-Founder / CTO"
-                company="Safe Technology Ventures (Singapore) | Dispute Resolution Platform for E-commerce (FinTech)"
+                title="Lead Software Engineer"
+                company="Safe Technology Ventures (Singapore)"
                 period="Jul 2023 - May 2024"
                 description={[
-                  "Architected a secure dispute resolution platform for e-commerce transactions, enhancing user trust and safety.",
-                  "Implemented a microservices architecture using Node.js and Next.js, ensuring scalability and maintainability.",
-                  "Integrated advanced security features, including end-to-end encryption and multi-factor authentication.",
-                  "Led a team of developers in building a robust API for seamless integration with e-commerce platforms.",
-                  "Collaborated with cross-functional teams to align product features with business goals and user needs.",
-                  "Utilized AWS services for cloud infrastructure, ensuring high availability and disaster recovery.",
+                  "Architected a secure dispute resolution platform for e-commerce transactions, enhancing user trust and safety",
+                  "Implemented a microservices architecture using Node.js and Next.js, ensuring scalability and maintainability",
+                  "Integrated advanced security features, including end-to-end encryption and multi-factor authentication",
+                  "Led a team of developers in building a robust API for seamless integration with e-commerce platforms",
+                  "Utilized AWS services for cloud infrastructure, ensuring high availability and disaster recovery",
                 ]}
                 technologies={[
                   "Next.js",
                   "Node.js",
                   "PostgreSQL",
                   "AWS",
-                  "EC2",
+                  "Docker",
                 ]}
+                delay={1.2}
+              />
+
+              <ExperienceCard
+                title="Software Engineer"
+                company="Tradeshare LLC (USA) | Decentralized Lending Platform (DeFi)"
+                period="Dec 2020 - Dec 2021"
+                description={[
+                  "Designed smart contracts (Solidity) for collateralized loans, interest rate models, and liquidation mechanisms, reducing bad debt by 90% vs. industry averages",
+                  "Developed a React-based frontend with Web3.js for seamless user interaction with the blockchain",
+                  "Implemented a secure wallet integration for user transactions, enhancing security and user experience",
+                  "Created a real-time analytics dashboard for monitoring loan performance and user activity",
+                ]}
+                technologies={["React", "Node.js", "Solidity", "Web3.js", "Ethers.js"]}
                 delay={1.3}
               />
 
               <ExperienceCard
-                title="Lead Software Engineer & Product Designer"
-                company="Tradeshare LLC (USA) | Decentralized Lending Platform (DeFi)"
-                period="Dec 2020 - Dec 2021"
+                title="Software Engineer"
+                company="ProximaX LLC (Remote)"
+                period="Apr 2019 - Dec 2020"
                 description={[
-                  "Designed smart contracts (Solidity) for collateralized loans, interest rate models, and liquidation mechanisms, reducing bad debt by 90% vs. industry averages.",
-                  "Developed a React-based frontend with Web3.js for seamless user interaction with the blockchain.",
-                  "Implemented a secure wallet integration for user transactions, enhancing security and user experience.",
-                  "Created a real-time analytics dashboard for monitoring loan performance and user activity.",
+                  "Developed blockchain-based applications on the ProximaX Sirius platform",
+                  "Built cross-platform wallet applications using Ionic and Angular",
+                  "Deployed and maintained blockchain network nodes and infrastructure",
+                  "Created SDKs and developer tools for the ProximaX ecosystem",
                 ]}
-                technologies={["React", "NodeJS", "Solidity", "Web3.js"]}
+                technologies={["Angular", "Ionic", "TypeScript", "Blockchain", "Docker", "Linux"]}
                 delay={1.4}
+              />
+
+              <ExperienceCard
+                title="Software Engineer"
+                company="NEM Foundation (Remote)"
+                period="Dec 2018 - Apr 2019"
+                description={[
+                  "Built official NEM blockchain wallet and explorer applications",
+                  "Developed frontend interfaces for blockchain interaction using Angular",
+                  "Contributed to NEM ecosystem tools and documentation",
+                ]}
+                technologies={["Angular", "TypeScript", "NEM SDK", "Blockchain"]}
+                delay={1.5}
+              />
+
+              <ExperienceCard
+                title="Software Engineer"
+                company="Hybrain (Philippines)"
+                period="Nov 2017 - Aug 2018"
+                description={[
+                  "Built a core banking system and eWallet platform for a Panama-based financial institution",
+                  "Developed RESTful APIs for secure transaction processing and multi-currency support",
+                  "Implemented compliance features and third-party payment system integrations",
+                ]}
+                technologies={["Angular", "Node.js", "PostgreSQL", "Docker", "REST APIs"]}
+                delay={1.6}
               />
             </div>
           </section>
@@ -287,14 +261,14 @@ export default function Home() {
           <section className="mb-16">
             <SectionTitle
               title="Technical Skills"
-              delay={1.5}
+              delay={1.7}
             />
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.6 }}
+                transition={{ duration: 0.5, delay: 1.8 }}
                 className="rounded-xl glass-card p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -311,60 +285,12 @@ export default function Home() {
                     <span>TypeScript</span>
                   </div>
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Web className="h-4 w-4" />
-                    <span>HTML/CSS</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
                     <TechIcons.Frontend className="h-4 w-4" />
                     <span>Tailwind CSS</span>
                   </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.7 }}
-                className="rounded-xl glass-card p-6">
-                <h3 className="mb-4 text-xl font-bold text-white">Backend</h3>
-                <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.NodeJS className="h-4 w-4" />
-                    <span>Node.js</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Backend className="h-4 w-4" />
-                    <span>Express</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Database className="h-4 w-4" />
-                    <span>MongoDB</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Database className="h-4 w-4" />
-                    <span>PostgreSQL</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.8 }}
-                className="rounded-xl glass-card p-6">
-                <h3 className="mb-4 text-xl font-bold text-white">Mobile</h3>
-                <div className="flex flex-wrap gap-2">
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.ReactNative className="h-4 w-4" />
-                    <span>React Native</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Mobile className="h-4 w-4" />
-                    <span>Ionic</span>
-                  </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Mobile className="h-4 w-4" />
-                    <span>Expo</span>
+                    <TechIcons.Web className="h-4 w-4" />
+                    <span>Web3 Frontend</span>
                   </div>
                 </div>
               </motion.div>
@@ -374,8 +300,86 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.9 }}
                 className="rounded-xl glass-card p-6">
+                <h3 className="mb-4 text-xl font-bold text-white">Backend</h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.NodeJS className="h-4 w-4" />
+                    <span>Node.js</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Backend className="h-4 w-4" />
+                    <span>NestJS</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Backend className="h-4 w-4" />
+                    <span>Express</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Web className="h-4 w-4" />
+                    <span>WebSocket</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.0 }}
+                className="rounded-xl glass-card p-6">
+                <h3 className="mb-4 text-xl font-bold text-white">Blockchain</h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Frontend className="h-4 w-4" />
+                    <span>Solidity</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Web className="h-4 w-4" />
+                    <span>Ethereum</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Frontend className="h-4 w-4" />
+                    <span>Web3.js</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Frontend className="h-4 w-4" />
+                    <span>Ethers.js</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.1 }}
+                className="rounded-xl glass-card p-6">
+                <h3 className="mb-4 text-xl font-bold text-white">Databases</h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Database className="h-4 w-4" />
+                    <span>PostgreSQL</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Database className="h-4 w-4" />
+                    <span>MongoDB</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Database className="h-4 w-4" />
+                    <span>DynamoDB</span>
+                  </div>
+                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
+                    <TechIcons.Database className="h-4 w-4" />
+                    <span>Redis</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.2 }}
+                className="rounded-xl glass-card p-6 sm:col-span-2">
                 <h3 className="mb-4 text-xl font-bold text-white">
-                  DevOps & Cloud
+                  Cloud & DevOps
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
@@ -390,10 +394,6 @@ export default function Home() {
                     <TechIcons.Cloud className="h-4 w-4" />
                     <span>CI/CD</span>
                   </div>
-                  <div className="flex items-center gap-1 rounded-full glass px-3 py-1 text-sm text-white">
-                    <TechIcons.Cloud className="h-4 w-4" />
-                    <span>Vercel</span>
-                  </div>
                 </div>
               </motion.div>
             </div>
@@ -403,13 +403,13 @@ export default function Home() {
           <section className="mb-16">
             <SectionTitle
               title="Get In Touch"
-              delay={2.0}
+              delay={2.3}
             />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 2.1 }}
+              transition={{ duration: 0.5, delay: 2.4 }}
               className="rounded-xl glass-card p-6">
               <p className="mb-6 text-cv-light-gray">
                 Ready to discuss your next project? Let's build something exceptional together.

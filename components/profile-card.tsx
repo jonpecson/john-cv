@@ -2,7 +2,7 @@
 
 import * as TechIcons from "./tech-icons";
 
-import { Github, Instagram, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,77 +14,70 @@ export function ProfileCard() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="overflow-hidden rounded-xl glass-card p-6 shadow-lg">
-      <div className="flex flex-col items-center py-6">
-        <div className="relative mb-4">
+      className="overflow-hidden rounded-xl glass-card p-4 shadow-lg">
+      <div className="flex flex-col items-center py-3">
+        <div className="relative mb-2">
           {/* Dotted line decoration */}
-          <div className="absolute -right-16 -top-16 h-32 w-32 text-cv-orange opacity-50">
+          <div className="absolute -right-12 -top-12 h-24 w-24 text-cv-orange opacity-50">
             <div className="h-full w-full dotted-line"></div>
           </div>
 
-          <div className="relative mb-4 h-40 w-40 overflow-hidden rounded-full">
+          <div className="relative mb-2 h-28 w-28 overflow-hidden rounded-full">
             <Image
-              src="https://ik.imagekit.io/onefestival/cv/john-profile-photo.jpg?tr=w-200"
+              src="/images/john-profile.png"
               alt="John's profile picture"
-              width={160}
-              height={160}
-              className="h-full w-full object-cover "
+              width={112}
+              height={112}
+              className="h-full w-full object-cover"
             />
           </div>
 
           {/* Dotted line decoration */}
-          <div className="absolute -bottom-8 -left-8 h-24 w-24 text-cv-orange opacity-50">
+          <div className="absolute -bottom-6 -left-6 h-16 w-16 text-cv-orange opacity-50">
             <div className="h-full w-full dotted-line"></div>
           </div>
         </div>
 
-        <h2 className="mb-1 text-2xl font-bold text-white">
+        <h2 className="mb-0.5 text-xl font-bold text-white">
           John Anthony Pecson
         </h2>
 
-        <div className="mb-6 flex items-center space-x-2">
-          {/* <div className="h-2 w-2 rounded-full bg-cv-orange"></div> */}
-          <span className="text-cv-orange text-center font-semibold">
-            Senior Full-Stack Engineer & Solutions Architect
+        <div className="mb-3 flex items-center space-x-2">
+          <span className="text-cv-orange text-center text-sm font-semibold">
+            Full-Stack Engineer | Frontend & Web3
           </span>
         </div>
 
-        <div className="mb-6 text-left text-gray-300 text-sm max-w-sm">
+        <div className="mb-3 text-left text-gray-300 text-xs max-w-sm">
           <p>
-           Senior Software Engineer with 10+ years architecting systems that serve millions of users and process $2M+ in transactions. I build:
+            Full-stack engineer with 8+ years building web applications across the entire stack. Strong frontend focus with deep blockchain integration experience.
           </p>
-          <ul className="mt-2 list-disc list-inside text-left mx-auto max-w-sm ">
-         
-            <li className="text-xs pl-4 py-2">Full-stack applications (React, Node.js) serving 50K+ concurrent users</li>
-            <li className="text-xs pl-4 py-2">Cloud infrastructure (AWS, Docker) reducing costs by 35%</li>
-            <li className="text-xs pl-4 py-2">CI/CD pipelines cutting deployment time from hours to minutes</li>
-            <li className="text-xs pl-4 py-2">Scalable architectures handling 99.9% uptime at enterprise scale</li>
+          <ul className="mt-1 list-disc list-inside text-left mx-auto max-w-sm">
+            <li className="text-xs pl-3 py-0.5">React, Next.js, TypeScript — responsive, scalable UIs</li>
+            <li className="text-xs pl-3 py-0.5">Blockchain-enabled frontends with Ethers.js & Web3.js</li>
+            <li className="text-xs pl-3 py-0.5">Node.js, NestJS, PostgreSQL — APIs & backend services</li>
+            <li className="text-xs pl-3 py-0.5">AWS, Docker, WebSockets — deployment & real-time systems</li>
           </ul>
-          <p className="mt-2 italic ">
-            I don't just write code—I architect solutions that scale to millions, deploy with zero downtime, and deliver measurable ROI.
+          <p className="mt-1.5 italic text-xs">
+            From frontend interfaces to backend APIs and smart contract integrations — I ship end-to-end.
           </p>
         </div>
 
-        <div className="flex space-x-4">
+        <div className="flex space-x-3">
           <Link
             href="https://github.com/jonpecson"
-            className="rounded-full glass p-2 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
-            <Github size={20} />
+            className="rounded-full glass p-1.5 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
+            <Github size={18} />
           </Link>
           <Link
-            href="#"
-            className="rounded-full glass p-2 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
-            <Twitter size={20} />
-          </Link>
-          <Link
-            href="#"
-            className="rounded-full glass p-2 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
-            <Instagram size={20} />
+            href="https://linkedin.com/in/jonpecson"
+            className="rounded-full glass p-1.5 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
+            <Linkedin size={18} />
           </Link>
           <Link
             href="mailto:jonpecson.io@gmail.com"
-            className="rounded-full glass p-2 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
-            <TechIcons.Mail className="h-5 w-5" />
+            className="rounded-full glass p-1.5 text-gray-300 hover:bg-white/20 hover:text-white transition-colors">
+            <TechIcons.Mail className="h-[18px] w-[18px]" />
           </Link>
         </div>
       </div>
