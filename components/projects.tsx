@@ -12,6 +12,30 @@ export function Projects() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
+            title="MeowPass"
+            description="CLI-first secret management for developers. Store API keys, sync .env files, and share secrets with your team — all E2E encrypted with AES-256-GCM. Go API on AWS Lambda, Neon Postgres, with Homebrew distribution and Lemon Squeezy payments."
+            image="/images/projects/meowpass.webp"
+            link="https://meowpass.dev"
+            technologies={["Go", "Next.js 16", "AWS Lambda", "Neon Postgres", "Tailwind CSS"]}
+          />
+
+          <ProjectCard
+            title="Pickle Time"
+            description="The Philippines' premier pickleball court booking platform. Book courts, join open play sessions, hire coaches, and enter tournaments — with real-time availability, interactive maps, and payment verification for players and venue operators."
+            image="/images/projects/pickle-time.webp"
+            link="https://pickletime.ph"
+            technologies={["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Clerk", "Leaflet"]}
+          />
+
+          <ProjectCard
+            title="StatLingo"
+            description="Real-time communication platform for healthcare and hospitality frontline teams. Instant alerts with auto-escalation, multilingual translation (20+ languages), incident tracking, and HIPAA-aligned audit trails — replacing radios and overhead pages."
+            image="/images/projects/statlingo.webp"
+            link="https://statlingo.ai"
+            technologies={["Next.js 16", "Kotlin", "Jetpack Compose", "Tailwind CSS", "ML Kit"]}
+          />
+
+          <ProjectCard
             title="WeighSlim"
             description="Full-stack telehealth platform for semaglutide weight loss programs. Built scalable patient management system with secure payment processing, automated appointment scheduling, and real-time progress tracking. Serves 500+ active patients with 98% satisfaction rate."
             image="/placeholder.svg?height=200&width=400"
